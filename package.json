@@ -5,7 +5,13 @@
   "repository": "https://github.com/NikoEscobar/Assento-de-foguete-Fase-02-Node.git",
   "author": "Níkolas Escobar <40873324+NikoEscobar@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
