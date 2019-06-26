@@ -2,6 +2,9 @@ const express = require("express");
 
 const server = express();
 
+//Players
+const users = ["Player01", "Player02", "Player03"];
+
 server.get("/server", (req, res) => {
   return res.send({ message: "Server on" });
 });
@@ -13,9 +16,9 @@ server.get("/user", (req, res) => {
 });
 
 // Route params = /users/1
-server.get("/users/:id", (req, res) => {
-  const { id } = req.params;
-  return res.json({ message: `User id: ${id}` });
+server.get("/users/:index", (req, res) => {
+  const { index } = req.params;
+  return res.json(users[index]);
 });
 
 server.listen(3000);
